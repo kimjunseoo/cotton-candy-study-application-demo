@@ -9,6 +9,8 @@ const server = http.createServer(app);
 const wsServer = new Server(server);
 
 app.set("views", __dirname + "/views");
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use("/", globalRouter);
 
 server.listen(3002, () => { console.log("*****HTTP/WS SERVER ON*****")});
