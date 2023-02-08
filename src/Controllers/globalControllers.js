@@ -1,4 +1,5 @@
 import Room from '../Models/room';
+import { wsServer } from '../server';
 
 const path = require('path');
 
